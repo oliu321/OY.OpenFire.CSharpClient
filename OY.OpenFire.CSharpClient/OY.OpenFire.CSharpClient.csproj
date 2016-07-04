@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0DA0734C-93D6-4CD8-8AD4-27C1A56D3116}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OY.OpenFire.CSharpClient</RootNamespace>
+    <AssemblyName>OY.OpenFire.CSharpClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\AuthenticationMode.cs" />
+    <Compile Include="Entity\AuthenticationToken.cs" />
+    <Compile Include="Entity\GroupEntities.cs" />
+    <Compile Include="Entity\GroupEntity.cs" />
+    <Compile Include="Entity\MUCRoomEntities.cs" />
+    <Compile Include="Entity\MUCRoomEntity.cs" />
+    <Compile Include="Entity\ParticipantEntities.cs" />
+    <Compile Include="Entity\ParticipantEntity.cs" />
+    <Compile Include="Entity\RosterEntities.cs" />
+    <Compile Include="Entity\RosterItemEntity.cs" />
+    <Compile Include="Entity\SessionEntities.cs" />
+    <Compile Include="Entity\SessionEntity.cs" />
+    <Compile Include="Entity\SystemProperties.cs" />
+    <Compile Include="Entity\SystemProperty.cs" />
+    <Compile Include="Entity\UserEntities.cs" />
+    <Compile Include="Entity\UserEntity.cs" />
+    <Compile Include="Entity\UserGroupsEntity.cs" />
+    <Compile Include="Entity\UserProperty.cs" />
+    <Compile Include="IOpenFireRestService.cs" />
+    <Compile Include="OpenFireRestClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Exception\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
